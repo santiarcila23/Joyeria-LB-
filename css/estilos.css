@@ -414,3 +414,11 @@ main { max-width: 1180px; margin: 0 auto; }
 @media (min-width: 700px) {
   .grid-categorias .tarjeta-cat:first-child { aspect-ratio: auto; }
 }
+/* Redes en el pie de página */
+.footer-redes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; }
+.footer-redes .red {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 10px 18px; border-radius: 999px;
+  border: 1px solid var(--oro-osc); color: var(--oro); font-size: 14px;
+}
+.footer-redes .red[hidden] { display: none; }

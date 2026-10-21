@@ -153,6 +153,15 @@
     // Footer
     const fc = $("#footerCiudad"); if (fc) fc.textContent = TIENDA.ciudad || "";
     const fw = $("#footerWpp"); if (fw) fw.href = `https://wa.me/${TIENDA.whatsapp}`;
+        // Instagram: acepta "@usuario", "usuario" o el link completo
+    const ig = (TIENDA.instagram || "").trim();
+    const fi = $("#footerIg");
+    if (fi && ig) {
+      const usuario = ig.replace(/^https?:\/\/(www\.)?instagram\.com\//i, "").replace(/^@/, "").replace(/[/?].*$/, "");
+      fi.href = `https://instagram.com/${usuario}`;
+      $("#footerIgTxt").textContent = "@" + usuario;
+      fi.hidden = false;
+    }
   }
 
   /* ---------------- Bloqueo de scroll (incluye iPhone) ---------------- */
