@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Catálogo de Joyería LB — elige por categoría y pide por WhatsApp.">
+  <title>Catálogo · Joyería LB</title>
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icono.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-page="catalogo">
+
+  <header class="header">
+    <a href="index.html" class="logo"><span class="logo-lb">LB</span><span class="logo-txt">Joyería</span></a>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html" class="activo">Catálogo</a>
+    </nav>
+    <button class="btn-carrito" id="abrirCarrito" aria-label="Abrir carrito">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="contador" id="contador">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="catalogo-cab">
+      <h1>Catálogo</h1>
+      <p>Toca una categoría para filtrar</p>
+    </section>
+
+    <!-- Tarjetas de categoría (se desplazan de lado en el celular) -->
+    <div class="filtro-categorias" id="filtroCategorias" role="tablist"></div>
+
+    <div class="buscador">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="buscar" placeholder="Buscar producto…" autocomplete="off">
+    </div>
+
+    <section class="seccion">
+      <div class="seccion-cab">
+        <h2 id="tituloCategoria">Todo</h2>
+        <span class="cantidad" id="cantidadResultados"></span>
+      </div>
+      <div class="grid-productos" id="gridProductos"></div>
+      <p class="vacio" id="sinResultados" hidden>No encontramos productos con esa búsqueda.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="logo-footer">Joyería <span class="oro">LB</span></p>
+    <p id="footerCiudad"></p>
+    <a id="footerWpp" class="footer-wpp" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+  </footer>
+
+  <div id="componentes"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
