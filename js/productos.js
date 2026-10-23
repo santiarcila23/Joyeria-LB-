@@ -22,7 +22,7 @@ const CATEGORIAS = [
 const PRODUCTOS = [
 
   /* ---------- Brazaletes Caballero ---------- */
-  { id: "bc-001", nombre: "Brazalete Caballero 01", categoria: "brazaletes-caballero", precio: null, destacado: true,
+  { id: "bc-001", nombre: "Brazalete Caballero 01", categoria: "brazaletes-caballero", precio: 2000, destacado: true,
     descripcion: "Brazalete tejido ajustable con balines.",
     imagenes: ["img/productos/brazaletes-caballero/brazalete-caballero-01.webp"] },
   { id: "bc-002", nombre: "Brazalete Caballero 02", categoria: "brazaletes-caballero", precio: null,
